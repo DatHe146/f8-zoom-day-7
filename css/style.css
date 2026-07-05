@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
 }
 
-.header-wrapper .nav a{
+.header-wrapper .nav > li > a{
     display: inline-block;
     text-decoration: none;
     color: var(--white);
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--second-font);
 }
 
-.header-wrapper-blog .nav a{
+.header-wrapper-blog .nav > li > a{
     display: inline-block;
     text-decoration: none;
     color: var(--white);
@@ -162,6 +162,55 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
     flex-direction: column;
 }
+
+.header .nav > li > a{
+    position: relative;
+}
+
+.submenu{
+    position: absolute;
+}
+
+.submenu li{
+    display: none;
+    font-size: 1.6rem;
+    color: rgba(0,0,0,0.6);
+    height: 45px;
+    padding: 0 25px;
+    background: var(--white);
+    width: 220px;
+}
+
+.submenu li a{
+    translate: 0;
+    transition: translate linear 0.3s;
+}
+
+.submenu li:hover{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.submenu li:hover a{
+    translate: 5px;
+}
+
+.nav li:hover .submenu li{
+    display: block;
+}
+
+.submenu li + li{
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.submenu a{
+    text-decoration: none;
+    display: block;
+    line-height: 45px;
+}
+
+
+
 .breadcrumb{
     display: flex;
     font-family: var(--second-font);
@@ -214,7 +263,7 @@ h1.heading{
 
 .main .main-content{
     flex-grow: 1;
-}
+} 
 
 .main .main-content span{
     font-size: 1.4rem;
@@ -434,7 +483,7 @@ h1.heading{
 .main-content .topics{
     display: flex;
     justify-content: center;
-    gap: 20px;    
+    gap: 20px;   
 }
 
 .main-content .blog{
@@ -508,6 +557,7 @@ h1.heading{
     border-radius: 15px;
     line-height: 30px;
     height: 30px;
+    transition: background linear 0.3s; 
 }
 
 .main-content .topics .active a{
@@ -536,12 +586,17 @@ h1.heading{
     width: calc(100% / var(--column) - var(--sapcing));
     margin-left: var(--sapcing);
     border: 1px solid #0000000d;
-    
+    overflow: hidden;
+}
+
+.courses-list .course-item:hover .course-thumb{
+    transform: scale(1.1);
 }
 
 .courses-list .course-thumb{
     aspect-ratio: 5/4; 
     display: block;
+    transition: transform linear 0.3s;
 }
 
 .courses-list .course-thrumb{
@@ -599,7 +654,14 @@ h1.heading{
     border-radius: 30px;
     padding: 0 10px;
     color: var(--white);
+    translate: 0;
+    transition: translate linear 0.3s;
 }
+
+.courses-list .course-info-bottom .course-btn:hover{
+    translate: 0 -5px ;
+}
+
 .pagination{
     margin-top: 15px;
     display: flex;
