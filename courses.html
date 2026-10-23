@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
+    <!-- link wow -->
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body>
     <div class="wrapper">
@@ -160,10 +165,12 @@
                         <div class="courses-list">
                             <!-- course item -->
                             <div class="course-item">
-                                <div class="course-thumb">
-                                    
-                                    <a href=""><img src="./img/img-course-1.png" alt="" class="course-thrumb"></a>
+                                <div class="thumb-wrapper">
+                                    <div class="course-thumb">
+                                        <a href=""><img src="./img/img-course-1.png" alt="" class="course-thrumb"></a>
+                                    </div>
                                 </div>
+                                
                                 <div class="course-info">
                                     <h3 class="course-title"><a href="">Introduction to PHP language with Ajax & Redux</a></h3>
                                     <p class="info">In this course, you will learn the of PHP Framework and Ajax. </p>
@@ -378,7 +385,7 @@
         <div class="footer">
             <div class="container">
                 <div class="footer-item-1">
-                    <img src="./img/img-logo.png" alt="" class="logo">
+                    <img src="./img/img-logo.png" alt="" class="logo wow animate__animated animate__flip">
                     <p>Scholars provides universal access to the world’s best education, partnering with top universities and organizations to offer courses online.</p>
                     <p>© 2017 Scholrs Inc. All rights reserved.</p>
                     <ul class="img-footer">
@@ -433,5 +440,9 @@
             </div>   
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
